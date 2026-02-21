@@ -1,0 +1,106 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #eef1f5;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 16px rgba(31, 41, 55, 0.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.94rem;
+}
+
+input,
+select,
+button {
+  border: 1px solid #c8d0da;
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.95rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+
+.quick-guide ol {
+  margin: 0.3rem 0 0;
+  padding-left: 1.1rem;
+}
+
+
+.muted {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.notice ul {
+  margin-top: 0;
+}
+
+pre {
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 10px;
+  padding: 0.8rem;
+  overflow: auto;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
