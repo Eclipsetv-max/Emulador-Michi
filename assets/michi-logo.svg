@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" fill="none">
+  <rect width="720" height="220" fill="#f4f5f7"/>
+  <g transform="translate(20,20)">
+    <circle cx="90" cy="90" r="70" fill="#B8C0CC"/>
+    <path d="M45 55 L65 25 L82 62" fill="#495665"/>
+    <path d="M135 55 L115 25 L98 62" fill="#495665"/>
+    <circle cx="65" cy="92" r="8" fill="#1d2530"/>
+    <circle cx="115" cy="92" r="8" fill="#1d2530"/>
+    <ellipse cx="90" cy="112" rx="10" ry="6" fill="#d48c96"/>
+    <path d="M75 126 Q90 140 105 126" stroke="#1d2530" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M24 108 L0 112" stroke="#1d2530" stroke-width="5" stroke-linecap="round"/>
+    <path d="M24 120 L2 126" stroke="#1d2530" stroke-width="5" stroke-linecap="round"/>
+    <path d="M156 108 L180 112" stroke="#1d2530" stroke-width="5" stroke-linecap="round"/>
+    <path d="M156 120 L178 126" stroke="#1d2530" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="230" y="142" font-family="Inter, Segoe UI, sans-serif" font-size="96" font-weight="700" fill="#4B5563">Michi</text>
+</svg>

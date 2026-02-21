@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michi Switch Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <img src="assets/michi-logo.svg" alt="Logo de Michi" class="logo" />
+        <div>
+          <h1>Michi Switch Launcher</h1>
+          <p>
+            Configura tu emulador con tus propios archivos.
+            Esta herramienta <strong>no trae ni instala keys, firmware ni juegos</strong>.
+          </p>
+        </div>
+      </header>
+
+      <section class="card quick-guide">
+        <h2>Guía rápida (EXE + DLL + archivos propios)</h2>
+        <ol>
+          <li>Instala o copia tu emulador por separado (archivo <code>.exe</code> y sus <code>.dll</code>).</li>
+          <li>Desde tu Nintendo Switch, obtén tus archivos legales (keys y firmware).</li>
+          <li>Pega esos archivos en tus carpetas locales.</li>
+          <li>Completa las rutas abajo y exporta la configuración.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Configuración principal</h2>
+        <form id="config-form">
+          <label>
+            Ruta del ejecutable del emulador (.exe)
+            <input id="emulatorPath" name="emulatorPath" placeholder="C:\\Emulador\\Emulator.exe" required />
+          </label>
+
+          <label>
+            Carpeta de dependencias DLL del emulador
+            <input id="dllPath" name="dllPath" placeholder="C:\\Emulador\\bin" required />
+          </label>
+
+          <label>
+            Carpeta de juegos (.nsp / .xci)
+            <input id="gamesPath" name="gamesPath" placeholder="D:\\SwitchGames" required />
+          </label>
+
+          <label>
+            Ruta de prod.keys (tu archivo propio)
+            <input id="keysPath" name="keysPath" placeholder="C:\\Users\\TuUsuario\\AppData\\Roaming\\Michi\\system\\prod.keys" required />
+          </label>
+
+          <label>
+            Ruta de firmware (tu dump propio)
+            <input id="firmwarePath" name="firmwarePath" placeholder="C:\\Firmware\\switch_firmware.zip" required />
+          </label>
+
+          <label>
+            Backend gráfico
+            <select id="graphicsBackend" name="graphicsBackend">
+              <option value="Vulkan">Vulkan</option>
+              <option value="OpenGL">OpenGL</option>
+            </select>
+          </label>
+
+          <div class="buttons">
+            <button type="submit">Guardar configuración</button>
+            <button type="button" id="exportBtn">Exportar config JSON</button>
+            <button type="button" id="templateBtn">Generar estructura de carpetas</button>
+          </div>
+        </form>
+      </section>
+
+
+      <section class="card">
+        <h2>Ejecutar juego (NSP/XCI)</h2>
+        <form id="launch-form">
+          <label>
+            Ruta del juego (.nsp / .xci)
+            <input id="gameFilePath" name="gameFilePath" placeholder="D:\SwitchGames\mi-juego.nsp" required />
+          </label>
+          <div class="buttons">
+            <button type="button" id="buildCommandBtn">Generar comando de inicio</button>
+            <button type="button" id="copyCommandBtn">Copiar comando</button>
+          </div>
+        </form>
+        <p class="muted">Nota: por seguridad del navegador, este launcher web no puede abrir el emulador automáticamente. Sí te genera el comando para ejecutarlo en Windows.</p>
+        <pre id="launch-command">(sin generar)</pre>
+      </section>
+
+      <section class="card">
+        <h2>Estructura esperada (estilo launcher)</h2>
+        <pre id="folder-template"></pre>
+      </section>
+
+      <section class="card notice">
+        <h2>Notas importantes</h2>
+        <ul>
+          <li>No se descargan ni instalan keys automáticamente.</li>
+          <li>No se descarga ni instala firmware automáticamente.</li>
+          <li>El emulador debe existir como <code>.exe</code> con sus <code>.dll</code> en tu PC.</li>
+          <li>Debes usar únicamente tus propios archivos de tu consola.</li>
+          <li>Este proyecto es un launcher/configurador, no un emulador completo.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
